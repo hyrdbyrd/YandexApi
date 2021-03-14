@@ -1,14 +1,13 @@
 {
-  "name": "yandex-api",
+  "name": "yandex-short-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Helpers for pull info from yandex music",
   "main": "index.js",
+  "homepage": "https://github.com/hyrdbyrd/YandexApi",
   "dependencies": {
     "axios": "^0.19.2"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC"

@@ -26,3 +26,10 @@ ___
 ## Docs?
 
 This lib is simply as can. Just read the [code](/index.js)
+
+___
+
+## TODO
+
+* add fetching for files (if it's legal)
+* maybe add kinopoisk api (if i need it)

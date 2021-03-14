@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_HOST = 'https://music.yandex.ru/';
+const YA_MUSIC_API_HOST = 'https://music.yandex.ru/';
 
 /** Initialize logging */
 const loggingDecorator = (() => {
@@ -27,11 +27,11 @@ const loggingDecorator = (() => {
 })();
 
 exports.Formatter = class {
-    static toQueryString = (obj) => `?${Object.entries(obj).map(([key, val]) => `${key}=${val}`).join('&')}`;
+    static toQueryString = obj => `?${Object.entries(obj).map(([key, val]) => `${key}=${val}`).join('&')}`;
 };
 
 exports.YandexMusicApi = class {
-    _instance = axios.create({ baseURL: API_HOST });
+    _instance = axios.create({ baseURL: YA_MUSIC_API_HOST });
 
     getPlaylist = loggingDecorator('getPlaylist', (owner, kinds, lang = 'ru') =>
         this._instance.get(`/handlers/playlist.jsx${exports.Formatter.toQueryString({ owner, lang, kinds })}`)
